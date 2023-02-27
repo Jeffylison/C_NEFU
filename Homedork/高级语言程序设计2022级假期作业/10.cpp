@@ -52,19 +52,8 @@ aa:
         NODE *phhhead=phead;
         while(phead)
         {
-            int t=0;
-            while(phhead!=phead)
-            {
-                if(phhead->data==phead->data)
-                {
-                    t++;
-                    break;
-                }
-                phhead=phhead->next;
-            }
-            if(t==0)printf("%d ",phead->data);
+            printf("%d ",phead->data);
             phead=phead->next;
-            phhead=phhhead;
         }
         while(ptail)
         {
