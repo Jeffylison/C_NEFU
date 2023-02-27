@@ -55,7 +55,11 @@ aa:
             int t=0;
             while(phhead!=phead)
             {
-                if(phhead->data==phead->data) {t++;break;}
+                if(phhead->data==phead->data)
+                {
+                    t++;
+                    break;
+                }
                 phhead=phhead->next;
             }
             if(t==0)printf("%d ",phead->data);
@@ -88,7 +92,11 @@ aa:
             int tt=0;
             while(phhead!=pphead)
             {
-                if(phhead->data==pphead->data) {tt++;break;}
+                if(phhead->data==pphead->data)
+                {
+                    tt++;
+                    break;
+                }
                 phhead=phhead->next;
             }
             if(tt==0)printf("%d ",pphead->data);
@@ -106,3 +114,4 @@ aa:
     }
     return 0;
 }
+//4 6 8 10 0 1 2 3 4 5 6 7 0   3 2 5 6 4 0 1 2 6 7 8 5 3 10 0  3 6 9 7 5 1 2 30 0 1 3 2 8 6 8 42 5 6 4 5 0   9 8 7 6 4 2 2 5 7 0 5 4 7 5 6 2 7 4 5 5 0
