@@ -34,7 +34,8 @@ int main()
             ptail=pnew;
         }
 
-    aa:    while(1)
+aa:
+        while(1)
         {
             ppnew=(NODE *)malloc(sizeof(NODE));
             scanf("%d",&ppnew->data);
@@ -49,7 +50,18 @@ int main()
         phead=phead->next;
         while(phead)
         {
-            printf("%d ",phead->data);
+            int t=0;
+            NODE *have=phead->next;
+            while(have)
+            {
+                if(phead->data==have->data)
+                {
+                    t++;
+                    break;
+                }
+                have=have->next;
+            }
+            if(t==0)printf("%d ",phead->data);
             phead=phead->next;
         }
         while(ptail)
@@ -58,7 +70,7 @@ int main()
             temp=pphead;
             while(pptail)
             {
-                if(ptail->data==pptail->data)//1 2 3 4 5 6 7
+                if(ptail->data==pptail->data)//1 2 2 4 5 6 7
                 {
                     temp->next=temp->next->next;
                     pptail=pptail->next;
@@ -73,7 +85,18 @@ int main()
         pphead=pphead->next;
         while(pphead)
         {
-            printf("%d ",pphead->data);
+            int tt=0;
+            NODE *hhave=pphead->next;
+            while(hhave)
+            {
+                if(pphead->data==hhave->data)
+                {
+                    tt++;
+                    break;
+                }
+                hhave=hhave->next;
+            }
+            if(tt==0)printf("%d ",pphead->data);
             pphead=pphead->next;
         }
 
