@@ -48,21 +48,19 @@ aa:
         ptail=phead->next;
         pptail=pphead->next;
         phead=phead->next;
+        NODE *phhead=phead;
+        NODE *phhhead=phead;
         while(phead)
         {
             int t=0;
-            NODE *have=phead->next;
-            while(have)
+            while(phhead!=phead)
             {
-                if(phead->data==have->data)
-                {
-                    t++;
-                    break;
-                }
-                have=have->next;
+                if(phhead->data==phead->data) {t++;break;}
+                phhead=phhead->next;
             }
             if(t==0)printf("%d ",phead->data);
             phead=phead->next;
+            phhead=phhhead;
         }
         while(ptail)
         {
@@ -83,21 +81,19 @@ aa:
             pptail=pphead->next;
         }
         pphead=pphead->next;
+        phhead=pphead;
+        phhhead=pphead;
         while(pphead)
         {
             int tt=0;
-            NODE *hhave=pphead->next;
-            while(hhave)
+            while(phhead!=pphead)
             {
-                if(pphead->data==hhave->data)
-                {
-                    tt++;
-                    break;
-                }
-                hhave=hhave->next;
+                if(phhead->data==pphead->data) {tt++;break;}
+                phhead=phhead->next;
             }
             if(tt==0)printf("%d ",pphead->data);
             pphead=pphead->next;
+            phhead=phhhead;
         }
 
         /* while(phead)
