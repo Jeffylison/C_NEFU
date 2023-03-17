@@ -36,7 +36,7 @@ int main()
         //scanf("%s %s %s ",&pnew->no,&pnew->name1,&pnew->name2);
             scanf("%d ",&pnew->no);
         scanf("%s %s ",&pnew->name1,&pnew->name2);
-        cout<<pnew->no<<endl;
+        //cout<<pnew->no<<endl;
         //cin>>pnew->name1;
         //cin>>pnew->name2;
         if(strlen(pnew->name2)==1&&(pnew->name2[0]=='F'||pnew->name2[0]=='M')){pnew->sex=pnew->name2[0];}
