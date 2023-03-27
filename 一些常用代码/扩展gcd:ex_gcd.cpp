@@ -15,6 +15,7 @@ int main()
     int m,n,x,y;
     cin>>m>>n;
     ex_gcd(m,n,x,y);
+    //if(x<0) x=(x+m)%m; 求x最小正整数解
     cout<<x<<" "<<y;
     return 0;
 }
